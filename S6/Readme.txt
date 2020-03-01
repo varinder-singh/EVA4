@@ -1,6 +1,6 @@
 This is a readme file for assignment 6 of EVA4.
 
-This is how I tested my model with various combinations. Refer to the uploaded github image (Oberservations.png).
+This is how I tested my model with various combinations. Refer to the uploaded github image (Oberservations.jpg).
 
 First I tried removing dropout from the model to see the actual effects of L1, L2 and L1&L2.
 
