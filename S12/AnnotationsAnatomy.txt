@@ -1,0 +1,39 @@
+Refer to the image "AnnotationsAnatomy.png" - Below is the explanation of the Image.
+
+
+Each Annotation has 4 immediate children elements. They are 1. filename 2. size 3. regions 4. file_attributes. I will describe them below.
+
+1. filename -> Image file name
+
+2. size -> size of the actual image. Each image can have different sizes.
+
+3. regions: These are the actual regions we draw around the object. Shape is the attribute of the region. Shape can be rectangle, polygon etc.
+	A. rect -> shape is rectangle. x, y, width and height are the Shape attributes.
+	B. shape _attributes:
+		Below is pictorial representation of the rectangular region: x is the starting s position of the region. y is the starting y position of the region.
+		width -> width of the rectangular region (x axis)
+		height -> height of the rectangular region (y axis)
+		
+	(x,y)	width	((x+width),y)
+		 ---------------
+		|			|   
+		|			|height  (Y increases from top to bottom.)
+		|			|
+		---------------
+	(x,(y+height))	((x+width),(y+height))
+	          
+		-----X axis ---> increases
+		
+	C. region_attributes: (We choose these attributes while annotating)
+		Important one. This covers the object type information.
+		name -> name of the object (example img_001 we gave while annotating)
+		type: type of the object e.g., human, cat, dog etc. Type we choose while annotating.
+		image_quality: (We choose)
+			frontal-> attribute tells whether image appears to at front of the image. 
+			good_illumination-> true means, object is visible with good light.
+			good -> true indicates, object quaility is good. Object can easily be identified.
+			
+4. file_attributes:
+	caption -> caption to the image
+	public_domain -> Wheather Image is subjected to public domain
+	image_url: public url of the image
