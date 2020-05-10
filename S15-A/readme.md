@@ -3,7 +3,8 @@
 
 
 # Display Mask Images Sample
-
+![](PlotImages/mask.png) 
 
 
 # Display Depth Images Sample
+![](PlotImages/depth.png) 
