@@ -1,5 +1,5 @@
 # Display Overlay Images Sample
-![](/PlotImages/overlay.png) 
+![](PlotImages/overlay.png) 
 
 
 # Display Mask Images Sample
