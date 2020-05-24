@@ -17,6 +17,7 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 Loss Calculations:
 	Depth Maps:
 	Picked up loss definitions from - https://arxiv.org/pdf/1812.11941.pdf. The paper states three different losses combined as one loss only for depth map as the output which are as follows -
+
 	L(y, yˆ) = λLdepth(y, yˆ) + Lgrad(y, yˆ) + LSSIM(y, yˆ)
 	depth = h is the point-wise L1 loss defined on the depth values
 	Lgrad = loss defined over the image gradient g of the depth image (Custom Loss)
@@ -27,9 +28,9 @@ Loss Calculations:
 
 	Lgrad is the custom gradient loss written, which differentiates each pixel with its next pixel in the X and Y axis. (See loss_gradient.py for more clarity)
 
-	SSIM - Structural Similarity of the prediction and Ground Truth. Implemented using pytorch_mssim. This can help state the accuracy of the network as the values lies between -1 to 1 close to 1 means more aacurate.
+SSIM - Structural Similarity of the prediction and Ground Truth. Implemented using pytorch_mssim. This can help state the accuracy of the network as the values lies between -1 to 1 close to 1 means more aacurate.
 
-	Instance Segmentation:	For instance segment used pytorch's BCELoss(). The image gradient and pixel wise are already applied at whilst doing depth loss calculations - adding again would not help.
+Instance Segmentation:	For instance segment used pytorch's BCELoss(). The image gradient and pixel wise are already applied at whilst doing depth loss calculations - adding again would not help.
 
 Train:
 	The dataset has 400k images in total with a ration of 70:30 is divided for train and test respetively.
