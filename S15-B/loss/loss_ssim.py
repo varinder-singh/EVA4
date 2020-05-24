@@ -7,7 +7,7 @@ Arg3: Data range of the images. Default is 0-1
 Arg4: Average sizing boolean
 """
 def get_ssim_loss(img1, img2, data_range=1,size_average=False):
-    ssim_val = ssim(img1, img2, data_range=1, size_average=False)
+    ssim_val = ssim(img1, img2, data_range=1, size_average=True)
     loss_ssim = (1-ssim_val)/2
-    print("SSIM of the inputs =======> {} with Loss as =======> {}".format(ssim_val.item(),loss_ssim.item()))
-    return loss_ssim
+    #print("SSIM of the inputs =======> {} with Loss as =======> {}".format(ssim_val,loss_ssim))
+    return (loss_ssim,ssim_val)

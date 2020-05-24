@@ -10,7 +10,8 @@ return: loss od Depth
 """
 def get_loss(output, label):
     lambda_1 = 0.1
-    loss = lambda_1 * get_pointwise_loss(output, label) + get_grad_loss(output, label) + get_ssim_loss(output, label)
-    print("Loss in Dense Depth is =======> {}".format(loss.item()))
-    return loss
+    loss_ssim, ssim_val = get_ssim_loss(output, label)
+    loss = lambda_1 * get_pointwise_loss(output, label) + get_grad_loss(output, label) + loss_ssim
+    #print("Loss in Dense Depth is =======> {}".format(loss))
+    return (loss,ssim_val)
     
