@@ -1,8 +1,8 @@
 
 ##**Bigger Problem:**
-	The problem this CNN Model intents to solve is occulsion of Foreground objects to Background scene. As the whole world now uses CCTV cameras and depends on CCTV operators to report any unusual activity captured on CCTV. This tradiational approach is good but involves a lot of manpower and found erroneous too based on the operator's activity. CNN with deep learning can help to eradicate tradiational approach and bring intelligence into CCTV systems. 
+The problem this DNN Model intents to solve is occulsion of Foreground objects to Background scene. As the whole world now uses CCTV cameras and depends on CCTV operators to report any unusual activity captured on CCTV. This tradiational approach is good but involves a lot of manpower and found erroneous too based on the operator's activity. CNN with deep learning can help to eradicate tradiational approach and bring intelligence into CCTV systems. 
 
-	The dataset created to train CNN model has Foreground ovelayed on a Backgroud at random places which creates a live scene of people moving around at public places under the CCTV survillience. The CNN model aims to do what a CCTV if integrated with AI on the real video can possibly do. The problem is not just the movinf Foreground Objects but objects that are still for a quite while becomes the part of Background. E.g.- A car parked for days altogether must be added to the Background scene.
+The dataset created to train DNN model has Foreground ovelayed on a Backgroud at random places which creates a live scene of people moving around at public places under the CCTV survillience. The DNN model aims to do what a CCTV if integrated with AI on the real video can possibly do. The problem is not just the movinf Foreground Objects but objects that are still for a quite while becomes the part of Background. E.g.- A car parked for days altogether must be added to the Background scene.
 
 ##**Dataset Creation:**
 	https://github.com/varinder-singh/EVA4/tree/master/S15-A
