@@ -11,7 +11,7 @@ Model Creation:
 	The whole model architecture is based on the recent work done for generating depth maps when given a RGB image to the CNN Model. https://arxiv.org/pdf/1812.11941.pdf which defines - High Quality Monocular Depth Estimation via Transfer Learning. Followed the research for creating a encoder decoder model and deriving loss functions (must see loss section below). The architecture is simple and based on residual connections which supports not missing crucial information. The Receptive Field in such a problem should be atleat the size of the image or must be better if exceeding the image size as we always want to capture a complete Background and even some of the objects in the image lying at the corners.
 
 At the end the model produces two output images - 1. Depth Map 2. Instance segmentation (segmenting Foreground with Background)
-	<Add a model diagram and explain in 50 lines>
+![](Images/Encoder-Decoder.jpg) 
 
 Loss Calculations:
 	Depth Maps:
