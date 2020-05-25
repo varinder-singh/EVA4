@@ -20,7 +20,7 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 
 	L(y, yˆ) = λLdepth(y, yˆ) + Lgrad(y, yˆ) + LSSIM(y, yˆ)
 	depth = h is the point-wise L1 loss defined on the depth values
-	Lgrad = loss defined over the image gradient g of the depth image (Custom Loss)
+	Lgrad = loss defined over the image gradient g of the depth image (Jump directly - https://github.com/varinder-singh/EVA4/blob/master/S15-B/loss/loss_gradient.py)
 	LSSIM = Loss defined for Structural Similarity
 	LSSIM(y, yˆ) =  (1 − SSIM(y, yˆ))/2
 
