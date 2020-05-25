@@ -87,8 +87,9 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 		Train: Loss=0.12260 Acc = 55.90 Test: Loss=0.65 Acc=34
 		
 ##**Model Params Glance**
-	================================================================
+
+	==========================
 	Total params: 9,086,672
 	Trainable params: 9,086,672
 	Non-trainable params: 0
-	================================================================
+	==========================
