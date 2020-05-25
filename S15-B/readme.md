@@ -59,13 +59,10 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 			TP / (TP + FP + FN)
 
 	Since the mask out is binary either 0 or 1 it is easier to evaluate on the above metric.
-
-	<Add the picture clipped in mobile)
-
 	Total accurracy of DNN is the mean of SSIM calculated for depth and F-1 score for mask
 	 Acc = (SSIM+F-1)/2
 
-
+![](Images/Confusion-Matrix.jpg)
 ##**Data Augmentations**:
 
 	Albumentation transformations are used at runtime for train dataset.
