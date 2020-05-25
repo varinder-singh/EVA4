@@ -93,3 +93,5 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 	Trainable params: 9,086,672
 	Non-trainable params: 0
 	==========================
+
+##**Note** - The data is available in the zip file format. A CSV is created available as label_data.csv which is read by the Dataset which is modular and can expect number of images to read as a method argument for both train and test data.
