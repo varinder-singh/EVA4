@@ -95,7 +95,7 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 	==========================
 
 ##** Train and Test Accuracy curve to understand - see the traintest - train.py and test.py for accuracy calculations
-![](Images/train-test-acc-loss.png) 
+![](Images/train-test-acc-loss.png)    ![](Images/test-acc-loss.png)  
 
 
 ##**Note** - The data is available in the zip file format. A CSV is created available as label_data.csv which is read by the Dataset which is modular code and expect number of images to read as a method argument for both train and test data.
