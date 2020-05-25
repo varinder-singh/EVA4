@@ -66,7 +66,12 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 ![](Images/Confusion-Matrix.jpg)
 ##**Data Augmentations**:
 
-	Albumentation transformations are used at runtime for train dataset.
+	Albumentation transformations are used at runtime for train dataset -
+	1. HueSaturationValue
+	2. RandomBrightnessContrast
+	The above are added to add augmentations as the CCTV camera will not always be placed in Spring Season :-)
+	
+	Throwing some numbers captured to see the change without and with Albumentation Transformations.
 	Epoch = 1
 	Without Albumentations - 
 		Train: Loss=0.074, Acc=70.84  Test: Loss=0.88, Acc=33
