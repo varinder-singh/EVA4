@@ -57,7 +57,8 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 
 	IOU:
 			TP / (TP + FP + FN)
-
+	A raw image below explains considering an image and ground truth of 3x3 with F-1 and IOU calculations.
+	
 	Since the mask out is binary either 0 or 1 it is easier to evaluate on the above metric.
 	Total accurracy of DNN is the mean of SSIM calculated for depth and F-1 score for mask
 	 Acc = (SSIM+F-1)/2
