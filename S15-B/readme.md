@@ -4,7 +4,7 @@ The problem this DNN Model intents to solve is occulsion of Foreground objects t
 
 The dataset created to train DNN model has Foreground ovelayed on a Backgroud at random places which creates a live scene of people moving around at public places under the CCTV survillience. The DNN model aims to do what a CCTV if integrated with AI on the real video can possibly do. The problem is not just the movinf Foreground Objects but objects that are still for a quite while becomes the part of Background. E.g.- A car parked for days altogether must be added to the Background scene.
 
-##**Dataset Creation:**
+##**Dataset Creation:** The dataset is available at the links specified in this github.
 	https://github.com/varinder-singh/EVA4/tree/master/S15-A
 
 ##**Model Creation:**
@@ -30,7 +30,7 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 
 ##**SSIM** - Structural Similarity of the prediction and Ground Truth. Implemented using pytorch_mssim. This can help state the accuracy of the network as the values lies between -1 to 1 close to 1 means more aacurate.
 
-##**Instance Segmentation**:	For instance segment used pytorch's BCELoss(). The image gradient and pixel wise are already applied at whilst doing depth loss calculations - adding again would not help.
+##**Instance Segmentation**:	For instance segment used pytorch's BCELoss() and custom L1-LAD loss. The loss files are available in loss folder.
 
 ##**Train**:
 	The dataset has 400k images in total with a ration of 70:30 is divided for train and test respetively.
@@ -71,29 +71,14 @@ At the end the model produces two output images - 1. Depth Map 2. Instance segme
 	Albumentation transformations are used at runtime for train dataset.
 	Epoch = 1
 	Without Albumentations - 
-		Loss=0.074 Acc=70.84  Loss=0.88 Acc=33
+		Train: Loss=0.074, Acc=70.84  Test: Loss=0.88, Acc=33
 
 	With Albumentations -
-		Loss=0.12403 Acc = 52.28 Loss=0.65 Acc=34
+		Train: Loss=0.12403, Acc = 52.28 Test: Loss=0.65, Acc=34
 
-	Epoch = 1
+	Epoch = 2
 	Without Albumentations - 
-		Loss=0.088 Acc=71.93  Loss=0.87 Acc=34
+		Train: Loss=0.088 Acc=71.93 Test: Loss=0.87 Acc=34
 
 	With Albumentations -
-		Loss=0.12260 Acc = 55.90 Loss=0.65 Acc=34
-
-	Epoch = 1
-	Without Albumentations - 
-		Loss=0.074 Acc=70.84  Loss=0.88 Acc=33
-
-	With Albumentations -
-		Loss=0.12 Acc = 52.28 Loss=0.65 Acc=34
-
-	Epoch = 1
-	Without Albumentations - 
-		Loss=0.074 Acc=70.84  Loss=0.88 Acc=33
-
-	With Albumentations -
-		Loss=0.12 Acc = 52.28 Loss=0.65 Acc=34
-	<Show Matrix>
+		Train: Loss=0.12260 Acc = 55.90 Test: Loss=0.65 Acc=34
